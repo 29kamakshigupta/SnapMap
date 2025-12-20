@@ -69,36 +69,52 @@ SNAP-MAP allows students to instantly capture photos and share them on a live ca
 # 📂 Project Structure
 
 ```
-snap-map/
+snap-map/                         → Project root
 │
-├── contributors/
-│   └── <your_roll_number>.txt        # Contributors add their identity files here
+│   CONTRIBUTING.md               → Contribution guidelines
+│   README.md                     → Project overview
+│   
+├── backend/                      → Backend API
+│   │   package-lock.json         
+│   │   package.json              
+│   │   server.js                 → Server entry point
+│   │   
+│   ├── config/                   
+│   ├── controllers/              → Request handlers
+│   ├── db/                       → Database setup
+│   ├── middleware/               → Request middleware
+│   ├── models/                   → Database models
+│   ├── routes/                   → API routes
+│   └── utils/                    → Helper utilities
 │
-├── UI-UX/
-│   ├── contributors/
-|   |   ├──<your_roll>.txt            # Fonts, color palette, spacing rules
-│   └── main/                         # Finalized Design
+├── contributors/                 → Contributor records
+│   └── <your_roll_no>.txt            
+│       
+├── frontend/                     → Mobile frontend
+│   │   .gitignore                
+│   │   app.json                  → Expo app config
+│   │   babel.config.js           
+│   │   index.js                  → App entry point
+│   │   package-lock.json         
+│   │   package.json              
+│   │   
+│   ├── .expo/                    
+│   │   │   devices.json          
+│   │   │   README.md             
+│   │   │   settings.json         
+│   │
+│   └── src/                      
+│       │   App.js                → Root component
+│       │
+│       ├── assets/               → Images & fonts
+│       ├── components/           → Reusable UI
+│       ├── context/              
+│       ├── navigation/           → App navigation
+│       ├── screens/              → App screens
+│       └── services/             → API services
 │
-├── backend/
-│   ├── src/
-│   │   ├── models/                   # MongoDB Schemas (User, Photo, Event)
-│   │   ├── controllers/              # Backend business logic
-│   │   ├── middleware/               # Auth middleware, Clerk verification
-│   │   ├── routes/                   # API routes
-│   │   ├── utils/                    # Azure Upload service, helpers
-│   │   └── config/                   # DB connection config
-│   └── package.json
-│
-└── mobile/
-    ├── src/
-    │   ├── screens/                  # All React Native screens
-    │   ├── components/               # Reusable UI components
-    │   ├── navigation/               # Navigation setup
-    │   ├── services/                 # API calls, helpers
-    │   ├── context/                  # Global state, providers
-    │   └── assets/                   # Images, icons, fonts
-    └── package.json
-
+└── UI-UX/                        → Design resources
+    └── contributors/             → UI/UX credits
 
 ```
 ---
